@@ -1,0 +1,32 @@
+# FuelEU Maritime Compliance Platform
+
+## Phase 1 — Backend
+- [/] Initialize Node.js + TypeScript project with hexagonal structure
+- [/] Set up PostgreSQL with Docker Compose, Prisma ORM, migrations & seeds
+- [ ] Implement domain models (Route, ShipCompliance, BankEntry, Pool)
+- [ ] Implement core use-cases (ComputeCB, ComputeComparison, BankSurplus, ApplyBanked, CreatePool)
+- [ ] Implement ports (inbound + outbound interfaces)
+- [ ] Implement outbound adapters (Postgres repositories via Prisma)
+- [ ] Implement inbound adapters (Express HTTP controllers)
+- [ ] Wire up dependency injection and server startup
+- [ ] Write unit tests for domain logic and use-cases
+- [ ] Write integration tests for HTTP endpoints
+- [ ] Verify backend runs correctly
+
+## Phase 2 — Frontend
+- [ ] Initialize React + TypeScript + Vite + TailwindCSS project with hexagonal structure
+- [ ] Implement domain entities and port interfaces
+- [ ] Implement infrastructure adapters (API clients)
+- [ ] Implement Routes tab (table + filters + set-baseline)
+- [ ] Implement Compare tab (table + chart)
+- [ ] Implement Banking tab (KPIs + bank/apply actions)
+- [ ] Implement Pooling tab (member list + pool creation)
+- [ ] Wire up tabs/routing and polish UI
+- [ ] Write unit tests for use-cases and components
+- [ ] Verify frontend runs correctly against backend
+
+## Phase 3 — Documentation & Integration
+- [ ] Write AGENT_WORKFLOW.md
+- [ ] Write README.md
+- [ ] Write REFLECTION.md
+- [ ] Final integration test (frontend + backend)
