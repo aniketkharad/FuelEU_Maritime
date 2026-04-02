@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { routeApi } from '../infrastructure/route.api';
-import { Route, ComparisonResult, TARGET_INTENSITY_2025 } from '../../core/domain/entities';
+import { type Route, type ComparisonResult, TARGET_INTENSITY_2025 } from '../../core/domain/entities';
 
 export function CompareTab() {
     const [baseline, setBaseline] = useState<Route | null>(null);

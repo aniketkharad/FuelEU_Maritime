@@ -1,10 +1,4 @@
-import {
-    Route,
-    ComparisonResult,
-    ComplianceBalance,
-    BankRecord,
-    Pool
-} from '../domain/entities';
+import type { Route, ComparisonResult, ComplianceBalance, BankRecord, Pool } from '../domain/entities';
 
 export interface IRouteApi {
     getAllRoutes(): Promise<Route[]>;

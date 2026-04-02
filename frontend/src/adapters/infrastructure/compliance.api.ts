@@ -1,6 +1,6 @@
 import { api } from './api';
-import { IComplianceApi } from '../../core/ports/ports';
-import { ComplianceBalance } from '../../core/domain/entities';
+import type { IComplianceApi } from '../../core/ports/ports';
+import type { ComplianceBalance } from '../../core/domain/entities';
 
 export class ComplianceApi implements IComplianceApi {
     async getComplianceBalance(shipId: string, year: number): Promise<ComplianceBalance> {

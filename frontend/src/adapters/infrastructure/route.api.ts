@@ -1,6 +1,6 @@
 import { api } from './api';
-import { IRouteApi } from '../../core/ports/ports';
-import { Route, ComparisonResult } from '../../core/domain/entities';
+import type { IRouteApi } from '../../core/ports/ports';
+import type { Route, ComparisonResult } from '../../core/domain/entities';
 
 export class RouteApi implements IRouteApi {
     async getAllRoutes(): Promise<Route[]> {

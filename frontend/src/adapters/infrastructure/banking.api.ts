@@ -1,6 +1,6 @@
 import { api } from './api';
-import { IBankingApi } from '../../core/ports/ports';
-import { BankRecord } from '../../core/domain/entities';
+import type { IBankingApi } from '../../core/ports/ports';
+import type { BankRecord } from '../../core/domain/entities';
 
 export class BankingApi implements IBankingApi {
     async getBankRecords(shipId: string, year: number): Promise<BankRecord[]> {

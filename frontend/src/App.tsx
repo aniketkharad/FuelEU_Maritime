@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { RoutesTab } from './adapters/ui/RoutesTab';
 import { CompareTab } from './adapters/ui/CompareTab';
 import { BankingTab } from './adapters/ui/BankingTab';
@@ -33,8 +33,8 @@ export default function App() {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === tab.id
-                      ? 'bg-brand-500/10 text-brand-400'
-                      : 'text-gray-400 hover:text-gray-200 hover:bg-dark-700/50'
+                    ? 'bg-brand-500/10 text-brand-400'
+                    : 'text-gray-400 hover:text-gray-200 hover:bg-dark-700/50'
                     }`}
                 >
                   {tab.label}
