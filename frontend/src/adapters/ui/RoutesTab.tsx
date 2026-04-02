@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { routeApi } from '../../infrastructure/route.api';
-import { Route } from '../../../core/domain/entities';
+import { routeApi } from '../infrastructure/route.api';
+import { Route } from '../../core/domain/entities';
 
 export function RoutesTab() {
     const [routes, setRoutes] = useState<Route[]>([]);

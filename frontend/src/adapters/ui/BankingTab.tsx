@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { complianceApi } from '../../infrastructure/compliance.api';
-import { bankingApi } from '../../infrastructure/banking.api';
-import { ComplianceBalance, BankRecord } from '../../../core/domain/entities';
+import { complianceApi } from '../infrastructure/compliance.api';
+import { bankingApi } from '../infrastructure/banking.api';
+import { ComplianceBalance, BankRecord } from '../../core/domain/entities';
 
 export function BankingTab() {
     const [shipId, setShipId] = useState('');

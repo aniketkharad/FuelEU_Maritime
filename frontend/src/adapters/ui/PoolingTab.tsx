@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { poolingApi } from '../../infrastructure/pooling.api';
-import { Pool } from '../../../core/domain/entities';
+import { poolingApi } from '../infrastructure/pooling.api';
+import { Pool } from '../../core/domain/entities';
 
 export function PoolingTab() {
     const [year, setYear] = useState('2024');
