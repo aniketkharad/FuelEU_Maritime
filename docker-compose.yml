@@ -31,5 +31,14 @@ services:
       postgres:
         condition: service_healthy
 
+  frontend:
+    build:
+      context: ./frontend
+    container_name: fueleu_frontend
+    ports:
+      - '8080:80'
+    depends_on:
+      - backend
+
 volumes:
   pgdata:
