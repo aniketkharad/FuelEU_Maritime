@@ -13,10 +13,23 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U fueleu -d fueleu_maritime']
+      test: [ 'CMD-SHELL', 'pg_isready -U fueleu -d fueleu_maritime' ]
       interval: 5s
       timeout: 5s
       retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    container_name: fueleu_backend
+    ports:
+      - '3001:3001'
+    environment:
+      - DATABASE_URL=postgresql://fueleu:fueleu_pass@postgres:5432/fueleu_maritime?schema=public
+      - PORT=3001
+    depends_on:
+      postgres:
+        condition: service_healthy
 
 volumes:
   pgdata:
