@@ -37,8 +37,8 @@ describe('RouteService', () => {
             findAll: vi.fn().mockResolvedValue(mockRoutes),
             findById: vi.fn(),
             findBaseline: vi.fn().mockResolvedValue(mockRoutes[0]),
-            update: vi.fn(),
-            setAllNonBaseline: vi.fn(),
+            clearBaselines: vi.fn(),
+            setBaseline: vi.fn(),
         };
         routeService = new RouteService(mockRepo);
     });
